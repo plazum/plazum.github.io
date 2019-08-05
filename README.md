@@ -1,2 +1,2 @@
 # plazum.github.io
-Redirection to https://www.zrte.ch
+Redirection to https://www.zrtech.org
