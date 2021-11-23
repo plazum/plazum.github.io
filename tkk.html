@@ -25,7 +25,7 @@
     <script>
       var time = 0, d, time_string;
       function show_bubu() {
-        if (document.getElementById("time").style.display == "block")
+        if (document.getElementById("result").style.display != "none")
           return;
         document.getElementById("bubu").style.display = "block";
       }
@@ -35,7 +35,7 @@
       }
       function finish() {
         d = new Date();
-        if (document.getElementById("time").style.display == "block")
+        if (document.getElementById("result").style.display != "none")
           return;
         time = d.getTime() - time;
         time = Math.floor(time / 10);
@@ -45,14 +45,17 @@
         else if (time % 10 == 0)
           time_string += "0";
         document.getElementById("time").innerHTML = "恭喜你找到了唐可可！用时" + time_string + "秒。";
-        document.getElementById("time").style.display = "block";
+        document.getElementById("result").style.display = "contents";
         document.getElementById("bubu").style.display = "none";
       }
     </script>
   </head>
   <body>
     <div>
-      <h1 id="time" style="display: none;"></h1>
+      <div id="result" style="display: none;">
+        <h1 id="time"></h1>
+        <img style="margin: auto;" src="5.gif">
+      </div>
       <img id="bubu" style="display: none; margin: auto;" src="4.gif">
       <img src="3.jpg">
       <table>
